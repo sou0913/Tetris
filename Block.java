@@ -20,6 +20,8 @@ public class Block {
         this.column = column;
     }
     public void fall(){
-        this.row +=1;
+        try {
+            this.row +=1;
+        } catch(ArrayIndexOutOfBoundsException e){}
     }
 }

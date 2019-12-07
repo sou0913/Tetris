@@ -17,9 +17,13 @@ public class Map {
         this.sheet = sheet;
     }
     public boolean check_below(int i,int j) {
-        if (this.sheet[i+1][j] == "."){
-            return true;
-        } else {
+        try{
+            if (this.sheet[i+1][j] == "."){
+                return true;
+            } else {
+                return false;
+            }
+        } catch(ArrayIndexOutOfBoundsException e){
             return false;
         }
     }
